@@ -43,4 +43,12 @@ function anagrammedName(name) {
 		console.log(name + " not known for anagramming.");
 		return name;
 	}
+
+	$(".friend a").click(nameClick);
+
+	function nameClick(e){
+		e.preventDefault();
+		$(this).text(anagrammedName(this));
+	}
+
 }
